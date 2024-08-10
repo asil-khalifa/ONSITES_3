@@ -9,8 +9,6 @@ export default function Home() {
   async function getQuestions() {
     try {
       const response = await axiosBase.get(`/questions`);
-      console.log(response);
-
       if (response.data.success) {
         setQuestions(response.data.questions);
       }
@@ -21,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     getQuestions();
-  })
+  }, []);
 
 
   return (
@@ -29,7 +27,7 @@ export default function Home() {
       <h1 className='text-4xl mt-3 mb-8'>A list of Questions:</h1>
       <div className='flex flex-col gap-4 w-[80vw]'>
         {questions.map(question => {
-          return <QuestionButton question={question} />
+          return <QuestionButton key={question._id} question={question} />
         })}
       </div>
     </div>
