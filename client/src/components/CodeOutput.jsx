@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function CodeOutput(result) {
-    const {code, stdout, stderr, output, passed} = result.result;
+    const { stdout, stderr, output, passed} = result.result;
 
     // console.log(passed, stdout, stderr, output, code);
 
