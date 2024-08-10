@@ -1,5 +1,12 @@
 # Leetcode Clone:
 
+## RUN:
+client: `npm run dev`<br>
+Server: `nodemon index.js`<br>
+
+! Requires docker to be installed to run properly
+
+
 ### Add two numbers:
 Sample Python code:<br>
 
